@@ -76,14 +76,13 @@
         $(function () {
             $('form').submit(function () {
                 const processing = "登録"
-                const date_f     = $('input[name="date"]').val().getFullYear()+$('input[name="date"]').val().getMonth()+$('input[name="date"]').val().getDate()
                 const date       = $('input[name="date"]').val();
                 const time_start = $('input[name="time_start"]').val();
                 const time_end   = $('input[name="time_end"]').val();
                 const title      = $('input[name="title"]').val();
                 const place      = $('input[name="place"]').val();
                 const memo_url   = $('input[name="memo_url"]').val();
-                const msg = `${processing}\n${date_f}\n${title}\n${time_start}\n${time_end}\n${place}\n${memo_url}`;
+                const msg = `${processing}\n${date}\n${title}\n${time_start}\n${time_end}\n${place}\n${memo_url}`;
                 sendText(msg);
                 return false;
             });
